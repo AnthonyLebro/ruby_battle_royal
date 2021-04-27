@@ -13,7 +13,7 @@ player2.show_state
 puts "-------------------------------"
 
 
-while player2.life_points > 0 && player1.life_points > 0
+while player2.life_points> 0 && player1.life_points> 0
   puts ""
   puts "\033[1;32mPassons à la phase d'attaque :"+"\033[0m"
   player2.attacks(player1)
@@ -24,4 +24,4 @@ while player2.life_points > 0 && player1.life_points > 0
   end
 end
 
-binding.pry
+#binding.pry

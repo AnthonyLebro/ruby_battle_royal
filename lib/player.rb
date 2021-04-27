@@ -1,6 +1,6 @@
 class Player
 
-  attr_accessor :player, :lifepoint
+  attr_accessor :player, :life_points
 
 
   def initialize(player)
@@ -13,22 +13,22 @@ class Player
     puts "#{@player} a #{@life_points} points de vie"
   end
 
-  def gets_damage(domages)
-    new_point = life_points - domage
-    if new_point <= 0
-      puts "#{@player} a été tué !"
+  def gets_damage(damages)
+    @life_points = life_points - damages
+    if @life_points <= 0
+      puts "#{@player} is WASTED !"
     end  
   end
 
   def attacks(player_attacked)
-    puts "#{@player} attaque le jouer #{player_attacked.player}"
-    damages = compute_damage
-    puts "Il lui inflige #{damages} de point de dégat!"
+    puts "#{@player} attaque le joueur #{player_attacked.player}"
+    damages = compute_damages()
+    puts "#{@player} lui inflige #{damages} de point de dégat!"
     player_attacked.gets_damage(damages)
   end
 
-  def compute_damage
-    return rand (1..6)
+  def compute_damages
+    return rand(1..6)
   end
 
 end
