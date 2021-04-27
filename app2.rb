@@ -7,7 +7,7 @@ require_relative 'lib/human_player'
 
 
 puts "     -------------------------------------------------
-     |         Welcome On The Power Coders           |
+     |            Welcome On TEKKEN Ruby             |
      |                 Battle Royal !                |
      -------------------------------------------------"
 
@@ -16,7 +16,7 @@ puts "     -------------------------------------------------
      -------------------------------------------------"
 puts " "
 
-    puts "Comment tu t'intitules?"  
+    puts ">>  Comment tu t'intitules?  <<"  
     name = gets.chomp.to_s
 
     human_player = HumanPlayer.new(name)
