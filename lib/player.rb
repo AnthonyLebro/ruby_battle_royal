@@ -16,14 +16,14 @@ class Player
   def gets_damage(damages)
     @life_points = life_points - damages
     if @life_points <= 0
-      puts "#{@player} is WASTED !"
+      puts "\033[1;31m#{@player} is WASTED !"+"\033[0m"
     end  
   end
 
   def attacks(player_attacked)
     puts "#{@player} attaque le joueur #{player_attacked.player}"
     damages = compute_damages()
-    puts "#{@player} lui inflige #{damages} de point de dégat!"
+    puts "#{@player} lui inflige #{damages} de point(s) de dégat!"
     player_attacked.gets_damage(damages)
   end
 
